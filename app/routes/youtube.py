@@ -9,4 +9,5 @@ def liked_videos():
         return redirect(url_for('auth.login'))
 
     videos = get_liked_videos(session['credentials'])
+    print(f"Retrieved {len(videos)} liked videos.")
     return render_template('liked_videos.html', videos=videos)
