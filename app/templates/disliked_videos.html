@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="card">
-  <h2>Your Disliked Videos</h2>
-  <ul class="card-list">
+    <h1>Your Disliked Videos</h1>
+    <p>Browse through your disliked videos collection</p>
+</div>
+
+<div class="grid">
     {% for video in videos %}
-      <li>
-        <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn" target="_blank">{{ video.snippet.title }}</a>
-      </li>
+    <div class="card">
+        <h3>{{ video.snippet.title }}</h3>
+        <p class="video-date">{{ video.snippet.publishedAt.split('T')[0] }}</p>
+        <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn" target="_blank">Watch Video</a>
+    </div>
     {% endfor %}
-  </ul>
 </div>
 {% endblock %}

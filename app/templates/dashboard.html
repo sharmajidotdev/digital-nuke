@@ -1,9 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="card" style="text-align:center;">
-  <h1>Welcome to DigitalNuke Dashboard</h1>
-  <a href="{{ url_for('youtube.liked_videos') }}" class="btn">Show YouTube Liked Videos</a>
-  <a href="{{ url_for('youtube.disliked_videos') }}" class="btn">Show YouTube Disliked Videos</a>
-  <a href="{{ url_for('youtube.subscriptions') }}" class="btn">Show YouTube Subscriptions</a>
+<div class="card">
+    <h1>Welcome to DigitalNuke Dashboard</h1>
+    <p>Manage your YouTube data with ease</p>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h2>Liked Videos</h2>
+        <p>View and manage your liked videos</p>
+        <a href="{{ url_for('youtube.liked_videos') }}" class="btn">View Liked Videos</a>
+    </div>
+
+    <div class="card">
+        <h2>Disliked Videos</h2>
+        <p>View and manage your disliked videos</p>
+        <a href="{{ url_for('youtube.disliked_videos') }}" class="btn">View Disliked Videos</a>
+    </div>
+
+    <div class="card">
+        <h2>Subscriptions</h2>
+        <p>Manage your YouTube subscriptions</p>
+        <a href="{{ url_for('youtube.subscriptions') }}" class="btn">View Subscriptions</a>
+    </div>
 </div>
 {% endblock %}

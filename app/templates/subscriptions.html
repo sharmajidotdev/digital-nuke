@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="card">
-  <h2>Your Subscriptions</h2>
-  <ul class="card-list">
-    {% for item in subscriptions %}
-      <li>
-        <a href="https://www.youtube.com/" class="btn" target="_blank">{{ item.snippet.title }}</a>
-      </li>
+    <h1>Your Subscriptions</h1>
+    <p>Manage your YouTube channel subscriptions</p>
+</div>
+
+<div class="grid">
+    {% for channel in channels %}
+    <div class="card">
+        <h3>{{ channel.snippet.title }}</h3>
+        <p class="video-date">Subscribed on {{ channel.snippet.publishedAt.split('T')[0] }}</p>
+        <a href="https://www.youtube.com/channel/{{ channel.snippet.resourceId.channelId }}" class="btn" target="_blank">Visit Channel</a>
+    </div>
     {% endfor %}
-  </ul>
 </div>
 {% endblock %}
