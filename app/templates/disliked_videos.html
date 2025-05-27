@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Your DisLiked Videos</h2>
-<ul>
-  {% for video in videos %}
-    <li>
-      <a href="https://www.youtube.com/watch?v={{ video.id }}">{{ video.snippet.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="card">
+  <h2>Your Disliked Videos</h2>
+  <ul class="card-list">
+    {% for video in videos %}
+      <li>
+        <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn" target="_blank">{{ video.snippet.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock %}

@@ -1,0 +1,81 @@
+:root {
+  --teal: #20cfcf;
+  --teal-light: #e6f7f7;
+  --teal-dark: #159e9e;
+  --white: #fff;
+  --shadow: 0 2px 8px rgba(32, 207, 207, 0.08);
+}
+
+body {
+  background: var(--teal-light);
+  color: #222;
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+nav {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--teal-dark);
+  font-size: 1.3rem;
+  margin-right: 2rem;
+}
+
+.btn {
+  background: var(--teal);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--teal-dark);
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(32, 207, 207, 0.15);
+}
+
+ul.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.card-list li {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  color: var(--teal-dark);
+  margin-top: 0;
+}
