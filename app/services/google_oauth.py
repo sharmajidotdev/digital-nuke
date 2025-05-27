@@ -35,7 +35,8 @@ def handle_callback():
     flow.fetch_token(authorization_response=request.url)
     credentials = flow.credentials
     session['credentials'] = credentials_to_dict(credentials)
-    return redirect(url_for('youtube.liked_videos'))
+    # return redirect(url_for('youtube.liked_videos'))
+    return redirect(url_for('dashboard.dashboard'))
 
 def credentials_to_dict(creds):
     return {

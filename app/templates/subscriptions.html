@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Subscriptions</h2>
+<ul>
+  {% for item in subscriptions %}
+    <li>
+      <a href="https://www.youtube.com/">{{ item.snippet.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

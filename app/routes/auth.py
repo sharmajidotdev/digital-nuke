@@ -1,12 +1,11 @@
 from flask import Blueprint, redirect, url_for, session
 from app.services.google_oauth import  oauth_flow
-# from app.services.google_oauth import  get_google_provider_cfg
 
 auth_bp = Blueprint('auth', __name__)
 
-@auth_bp.route('/')
-def home():
-    return redirect(url_for('auth.login'))
+# @auth_bp.route('/')
+# def home():
+#     return redirect(url_for('auth.login'))
 
 @auth_bp.route('/login')
 def login():

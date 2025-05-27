@@ -22,3 +22,25 @@ def get_liked_videos(session_creds):
             break
 
     return videos
+
+def get_disliked_videos(session_creds):
+    creds = Credentials(**session_creds)
+    youtube = build('youtube', 'v3', credentials=creds)
+
+    videos = []
+    next_page_token = None
+
+    while True:
+        request = youtube.videos().list(
+            part="snippet,contentDetails",
+            myRating="dislike",
+            maxResults=50,  # maximum allowed by API
+            pageToken=next_page_token
+        )
+        response = request.execute()
+        videos.extend(response.get('items', []))
+        next_page_token = response.get('nextPageToken')
+        if not next_page_token:
+            break
+
+    return videos

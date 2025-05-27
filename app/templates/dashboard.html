@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to DigitalNuke Dashboard</h1>
+<a href="{{ url_for('youtube.liked_videos') }}">Show youtube liked videos</a> <br>
+<a href="{{ url_for('youtube.disliked_videos') }}">Show youtube disliked videos</a> <br>
+<a href="{{ url_for('youtube.subscriptions') }}">Show youtube subscriptions</a> <br>
+
+{% endblock %}
